@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sqflite_keep_notes/views/home/home_view.dart';
+import 'package:sqflite_keep_notes/views/home_view.dart';
+
+import 'config/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: HomeView());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: lightTheme(), home: const HomeView());
   }
 }
